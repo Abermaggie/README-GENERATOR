@@ -1,0 +1,26 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Easy to use command line prompt using inquirer to create a project README",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abermaggie/README-GENERATOR.git"
+  },
+  "keywords": [
+    "README",
+    "GENERATOR"
+  ],
+  "author": "Maggie Abernathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abermaggie/README-GENERATOR/issues"
+  },
+  "homepage": "https://github.com/Abermaggie/README-GENERATOR#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
