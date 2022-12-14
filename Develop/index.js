@@ -39,6 +39,31 @@ inquirer
       message: 'Please choose the appropriate licensure for your project:',
       choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT License', 'ISC License','other'],
     },
+    {
+      type: 'input',
+      name: 'contributing',
+      message: 'Please explain how another developer might go about contributing to your project.'
+    },
+    {
+      type: 'editor',
+      name: 'testing',
+      message: 'Please provide numbered entries in the editor explaining testing methods for this project.'
+    },
+    {
+      type: 'editor',
+      name: 'roadMap',
+      message: 'Please enter the roadMap for future upgrades or anything to be added.'
+    },
+    {
+      type:'input',
+      name: 'email',
+      message: 'Please provide your email address for a way for users to reachout for support'
+    },
+    {
+      type: 'input',
+      name: 'gitHub',
+      message: 'Please enter your GitHub username',
+    }
 
   ])
   .then((answers) => {
@@ -49,9 +74,8 @@ inquirer
   });
 
 
-  let generateREADME = ({ project_name, purpose, installation, usage, contributorsHuman, contributors3rd, licenseOptions}) =>
+  let generateREADME = ({ project_name, purpose, installation, usage, contributorsHuman, contributors3rd, licenseOptions, contributing, testing, roadMap, email, gitHub}) =>
 `# ${project_name}
-
 
 ## Description
 ${purpose}
@@ -59,8 +83,6 @@ ${purpose}
 ## Installation
 ${installation}
 
-
-  
 ## Usage
 ${usage}
 
@@ -70,6 +92,19 @@ ${contributorsHuman}
 
 Third Part Contributors:
 ${contributors3rd}
+
+## Contributing to this Project
+${contributing}
+
+## Testing Methods
+${testing}
+
+## Road Map
+${roadMap}
+
+## Questions
+${email}
+${gitHub}
 
 ## License
 Licensed under the ${licenseOptions}.
