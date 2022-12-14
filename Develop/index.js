@@ -49,12 +49,12 @@ inquirer
   });
 
 
-  let generateREADME = ({ project_name, purpose, problem, licenseOptions, collaboratorsEx, collaboratorsGit, installation}) =>
+  let generateREADME = ({ project_name, purpose, installation, usage, contributorsHuman, contributors3rd, licenseOptions}) =>
 `# ${project_name}
 
 
 ## Description
-${purpose} ${problem}
+${purpose}
 
 ## Installation
 ${installation}
@@ -62,21 +62,14 @@ ${installation}
 
   
 ## Usage
+${usage}
 
 ## Credits
 Individual Collaborators:
-  - ${collaboratorsEx} / GitHub Username: ${collaboratorsGit}
-  -
-  -
+${contributorsHuman}
 
 Third Part Contributors:
-  -
-  -
-  -
-Tutorials:
-  -
-  -
-  -
+${contributors3rd}
 
 ## License
 Licensed under the ${licenseOptions}.
