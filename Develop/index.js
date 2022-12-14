@@ -89,6 +89,18 @@ inquirer
 
 <img width="100" alt="badge for licensure" src="https://img.shields.io/badge/License-${licenseOptions}-blue.svg">
 
+## Table of Contents:
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Contribute](#contributing-to-this-project)
+- [Testing](#testing-methods)
+- [Road_Map](#road-map)
+- [Questions](#questions)
+- [License](#license)
+
 ## Description
 ${purpose}
 
@@ -115,8 +127,8 @@ ${testing}
 ${roadMap}
 
 ## Questions
-${email}
-${gitHub}
+For support, Contact Me: ${email}
+GitHub User Profile: www.github.com/${gitHub}
 
 ## License
 Licensed under the ${licenseOptions}.
