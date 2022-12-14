@@ -121,7 +121,8 @@ ${testing}
 ${roadMap}
 
 ## Questions
-For support, Contact Me: ${email}
+For support,\
+Contact Me: ${email}\
 GitHub User Profile: www.github.com/${gitHub}
 
 ## License
