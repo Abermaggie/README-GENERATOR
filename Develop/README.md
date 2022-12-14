@@ -1,9 +1,8 @@
-# read me
-
+# README
 
 
 ## Description
-yum yup
+homework homework
 
 ## Installation
   - 
@@ -14,7 +13,7 @@ yum yup
 
 ## Credits
 Individual Collaborators:
-  - Maggie / GitHub Username: abermaggie
+  - maggie / GitHub Username: abermaggie
   -
   -
 

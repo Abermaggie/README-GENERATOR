@@ -1,42 +1,6 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 
-const generateREADME = ({ project_name, purpose, problem, licenseOptions, collaboratorsEx, collaboratorsGit, chooseSub, deployment}) =>
-`# ${project_name}
-
-
-
-## Description
-${purpose} ${problem}
-
-## Installation
-  - 
-  -
-  -
-  
-## Usage
-
-## Credits
-Individual Collaborators:
-  - ${collaboratorsEx} / GitHub Username: ${collaboratorsGit}
-  -
-  -
-
-Third Part Contributors:
-  -
-  -
-  -
-Tutorials:
-  -
-  -
-  -
-
-## License
-Licensed under the ${licenseOptions}.
-
-  `
-;
-
 inquirer
   .prompt([
     {
@@ -76,17 +40,51 @@ inquirer
     //   message: 'In addition to the minimum requirements for a README, please select any additional content you would like added:',
     //   choices: ['Table of Contents', 'Tests', 'Badges','Features','How to Contribute'],
     // },
-    // {
-    //   type: 'confirm',
-    //   name: 'deployment',
-    //   message: 'Do you intend to or have you already publically deployed this project?',
-    // },
+    // // {
+    // //   type: 'confirm',
+    // //   name: 'deployment',
+    // //   message: 'Do you intend to or have you already publically deployed this project?',
+    // // },
   ])
   .then((answers) => {
-    console.log(answers);
-    const readMeContent = generateREADME(answers);
-
+    let readMeContent = generateREADME(answers);
     fs.writeFile('README.md', readMeContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+      err ? console.log(err) : console.log('Successfully created README.md!')
     );
   });
+
+
+  const generateREADME = ({ project_name, purpose, problem, licenseOptions, collaboratorsEx, collaboratorsGit, chooseSub, deployment}) =>
+`# ${project_name}
+
+
+## Description
+${purpose} ${problem}
+
+## Installation
+  - 
+  -
+  -
+  
+## Usage
+
+## Credits
+Individual Collaborators:
+  - ${collaboratorsEx} / GitHub Username: ${collaboratorsGit}
+  -
+  -
+
+Third Part Contributors:
+  -
+  -
+  -
+Tutorials:
+  -
+  -
+  -
+
+## License
+Licensed under the ${licenseOptions}.
+
+  `
+;

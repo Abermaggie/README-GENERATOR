@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Easy to use command line prompt using inquirer to create a project README",
   "main": "index.js",
-  "type": "module",
+  "type":"module",
   "scripts": {
-    "start": "node index.js",
     "test": "npm run test"
   },
   "repository": {
