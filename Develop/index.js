@@ -1,8 +1,41 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 
-const generateREADME = ({ project_name, purpose, problem, licenseOptions, collaborators, chooseSub, deployment}) =>
-  `# ${project_name}`;
+const generateREADME = ({ project_name, purpose, problem, licenseOptions, collaboratorsEx, collaboratorsGit, chooseSub, deployment}) =>
+`# ${project_name}
+
+
+
+## Description
+${purpose} ${problem}
+
+## Installation
+  - 
+  -
+  -
+  
+## Usage
+
+## Credits
+Individual Collaborators:
+  - ${collaboratorsEx} / GitHub Username: ${collaboratorsGit}
+  -
+  -
+
+Third Part Contributors:
+  -
+  -
+  -
+Tutorials:
+  -
+  -
+  -
+
+## License
+Licensed under the ${licenseOptions}.
+
+  `
+;
 
 inquirer
   .prompt([
@@ -28,23 +61,29 @@ inquirer
       choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT License', 'ISC License','other'],
     },
     {
-      type: 'number',
-      name: 'collaborators',
-      message: 'Please estimate the number of collaborators or 3rd party assets that attributed to project success:',
+      type: 'input',
+      name: 'collaboratorsEx',
+      message: 'Please name one individual collaborator that contributed to project success:',
     },
     {
-      type: 'checkbox',
-      name: 'chooseSub',
-      message: 'In addition to the minimum requirements for a README, please select any additional content you would like added:',
-      choices: ['Table of Contents', 'Tests', 'Badges','Features','How to Contribute'],
+      type: 'input',
+      name: 'collaboratorsGit',
+      message: 'Please input the Github username for this collaborator:',
     },
-    {
-      type: 'confirm',
-      name: 'deployment',
-      message: 'Do you intend to or have you already publically deployed this project?',
-    },
+    // {
+    //   type: 'checkbox',
+    //   name: 'chooseSub',
+    //   message: 'In addition to the minimum requirements for a README, please select any additional content you would like added:',
+    //   choices: ['Table of Contents', 'Tests', 'Badges','Features','How to Contribute'],
+    // },
+    // {
+    //   type: 'confirm',
+    //   name: 'deployment',
+    //   message: 'Do you intend to or have you already publically deployed this project?',
+    // },
   ])
   .then((answers) => {
+    console.log(answers);
     const readMeContent = generateREADME(answers);
 
     fs.writeFile('README.md', readMeContent, (err) =>
