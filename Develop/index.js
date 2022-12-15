@@ -1,10 +1,10 @@
+// Import the package downloaded from inquirer//
 import inquirer from 'inquirer';
+// import the native package fs//
 import fs from 'fs';
 
-
-const badgeURL = "![GitHub license](https://img.shields.io/badge/license-";
-const badgeTail = "-blue.svg";
-
+// issert questions with types based on inquirer documentation.  This is how the user interfaces with the app.//
+// use type editor for free hand writing.  IT will pop up with the most used word edior//
 inquirer
   .prompt([
     {
@@ -70,6 +70,7 @@ inquirer
     }
 
   ])
+  // pass the user input into a function to be used to write the README file.//
   .then((answers) => {
     let readMeContent = generateREADME(answers);
     fs.writeFile('README.md', readMeContent, (err) =>
@@ -78,6 +79,10 @@ inquirer
   });
 
 
+  // pass in 'name' key from the inquirer prompt format.  Use these inputs to create the structure of the README.//
+  // import image of each license to place at the top of user's readme.//
+  // Create table that juumps to each section of README//
+  // add slashes at the end of each line in questions to break up word block//
   let generateREADME = ({ project_name, purpose, installation, usage, contributorsHuman, contributors3rd, licenseOptions, contributing, testing, roadMap, email, gitHub}) =>
 `# ${project_name}
 
@@ -119,6 +124,7 @@ ${testing}
 
 ## Road Map
 ${roadMap}
+
 
 ## Questions
 For support,\

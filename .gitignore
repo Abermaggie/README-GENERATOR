@@ -1,2 +1,3 @@
+# add anything you don't want pushed to git hub, here.
 node_modules/
 .DS_Store/
