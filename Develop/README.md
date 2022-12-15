@@ -31,12 +31,19 @@ Visit the following sites, select your preferred operating system, and download 
 
 
 ## Usage
+![image](https://user-images.githubusercontent.com/114010430/207765098-01b4edb9-208b-40e4-afd9-e8e5b050dcd0.png)
 Caption 1: Screen shot of basic packages that come within the the inquirer package.
 
+
+
 Caption 2: Screen shot of question functionality.
+![image](https://user-images.githubusercontent.com/114010430/207764968-1d085d84-af2b-44a8-8e81-d38ca2559e19.png)
+
 
 Video 1: Complete intialize, inquire/answer, and finished product captured via screenCastify.
+https://drive.google.com/file/d/1Yxh8WLfjBHqSxb_Ak2DD28oom5HN3AxY/view
 
+https://www.npmjs.com/package/inquirer
 Link to documentation for Inquirer.js.
 
 
